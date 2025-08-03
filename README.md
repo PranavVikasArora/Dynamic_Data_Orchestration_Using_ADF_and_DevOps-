@@ -12,7 +12,7 @@ A dynamic pipeline using Azure Data Factory, ingesting data from on-premises fil
 **Architecture Overview**
 
 1. Data Ingestion: Data is being ingested from On Prem Files, Azure SQL DB and GitHub using ADF Pipelines to the Bronze Layer (To get in-depth understanding of the steps followed and flow of Pipelines refer to : **"Documentation - Pipeline Creation"** file and **Template Files uploaded for the respective pipelines**)
-2. Data Processing: Using ADF, we perform transaformations on this data and provide data for our Silver and Gold Layer. (**Refer to "Project Documentation - Data Flow Transformations" file for Silver Load process**)
+2. Data Processing: Using ADF, we perform transaformations on this data and provide data for our Silver and Gold Layer. (**Refer to "Project Documentation - Data Flow Transformations" file for Silver Load process**; For Gold Layer Load we have followed the same process as Silver i.e. using DataFlows (taking Silver as Source, and Gold Container as Sink), the activities used to form the Gold Layer in data flow are joins, window fns, etc)
 3. Miscellaneous: Using Logic Apps, we have developed alerts for pipeline failures, and used Azure Devops to implement CI/CD for our pieplines
 
 **Author**
